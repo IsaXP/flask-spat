@@ -1,0 +1,21 @@
+<!doctype html>
+<title>Spatial ability task</title>
+<!-- <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'> -->
+
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='bootstrap.min.css')}}'>
+<div class=container>
+	<div class=page>
+		<h1>A short quiz</h1>
+		<div class=metanav>
+			<h4>Uw gegevens</h4>
+			<form id='userInfoForm' method='post' action='index'> <!-- action is the URL you want to move to next-->
+				<label>Naam: <input type='text' name='name'/></label>
+				<label>Leeftijd: <input type='text' name='age'/></label>
+				<label>Geslacht: <input type='radio' name='gender' value='male' class='inline'><img src='{{ url_for('static',filename='male.png')}}'></label>
+				<label>Geslacht: <input type='radio' name='gender' value='female' class='inline'><img src='{{ url_for('static',filename='female.png')}}'></label>
+				<input type='submit' value='Submit' class='btn'> <!-- value is the text that will appear on the button. -->
+			</form>
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,24 @@
+<!doctype html>
+<title>SPAT</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='spat.js') }}"></script>
+	<!-- <meta http-equiv='refresh' content='5;URL=/next'> -->
+	<!-- <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'> -->
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='bootstrap.min.css')}}'>
+
+<div class=page>
+	<div class='container'>
+		<h1>Question #{{num}}</h1>
+		<div class=metanav>
+			<img src='/cake/questions{{question}}'>
+
+			<form class='form-inline' id='answerForm' method='post' action='next'>
+				<label><input type='radio' name='answer' value={{ans1}} class='inline'><img src='/cake/questions/{{ans1}}'></label>
+				<label><input type='radio' name='answer' value={{ans2}} class='inline'><img src='/cake/questions/{{ans2}}'></label>
+				<label><input type='radio' name='answer' value={{ans3}} class='inline'><img src='/cake/questions/{{ans3}}'></label>
+				<input type='submit' value='Next' class='btn'>
+			</form>
+		</div>
+	</div>
+</div>
+
